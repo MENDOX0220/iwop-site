@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section {
+            margin: 100px 0px;
+            padding: 40px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            line-height: 2.9em;
+            flex-wrap: wrap;
+
+        }
+
+        #layout {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: auto;
+            list-style-type: none;
+        }
+
+        #topheader {
+            width: 100vw;
+            height: 100vh;
+            background-color: #36AFFF;
+            text-align: center;
+            color: white;
+            flex-wrap: wrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #headfull {
+            display: flex;
+        }
+
+        .biglogo-i {
+            font-size: 10em;
+            font-weight: bold;
+            transition-delay: 0.1s;
+            transition-duration: 2s;
+            text-shadow: 7px 7px transparent rgb(0, 0, 0, 0);
+        }
+
+        .biglogo-w {
+            font-size: 10em;
+            font-weight: bold;
+            transition-delay: 0.16s;
+            transition-duration: 2s;
+        }
+
+        .biglogo-o {
+            font-size: 10em;
+            font-weight: bold;
+            transition-delay: 0.25s;
+            transition-duration: 2s;
+        }
+
+        .biglogo-p {
+            font-size: 10em;
+            font-weight: bold;
+            transition-delay: 0.36s;
+            transition-duration: 2s;
+        }
+
+        #biglogos:hover .biglogo-i {
+            text-shadow: 7px 7px #000000;
+        }
+
+        #biglogos:hover .biglogo-w {
+            text-shadow: 7px 7px #000000;
+        }
+
+        #biglogos:hover .biglogo-o {
+            text-shadow: 7px 7px #000000;
+        }
+
+        #biglogos:hover .biglogo-p {
+            text-shadow: 7px 7px #000000;
+        }
+
+        .headermiddle {
+            margin: 0;
+            padding: 0;
+            font-size: 2em;
+        }
+
+        .headerbottom {
+            font-size: 1.4em;
+            margin-top: 2em;
+            margin-bottom: 0;
+        }
+
+        .headerbottomClock {
+            font-weight: bold;
+        }
+
+        #topbar {
+            width: 100%;
+            height: 70px;
+            background-color: #36AFFF;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+        }
+
+        #topbar.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .topbar-left {
+            font-size: 1.6em;
+            display: flex;
+            margin-left: 50px;
+            font-weight: bold;
+        }
+
+        .topbar-right {
+            margin-right: 50px;
+            text-align: center;
+        }
+
+        .topbar-right-menu {
+            font-size: 1.41em;
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+
+        .menu-shift {
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+
+        #middle {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .introduce {
+            text-align: center;
+            width: 60%;
+            margin: 100px auto;
+            padding: 30px auto;
+        }
+
+        .soge {
+            color: #36AFFF;
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .sogemun {
+            font-size: 1.52em;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .Curriculum {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .CurriLogo {
+            color: #36AFFF;
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0;
+            padding: 10px;
+
+        }
+
+        .CurriMenu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: center;
+            flex-direction: row;
+            width: 90%;
+            text-align: left;
+        }
+
+        .ListLogo {
+            color: #36AFFF;
+            font-size: 2.1em;
+            font-weight: bold;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .Listsentent {
+            font-size: 1.2em;
+            margin: 0;
+            padding: 10px;
+            flex-direction: row;
+        }
+
+        .Currilist {
+            margin: 40px auto;
+            word-wrap: break-word;
+            width: 500px;
+
+        }
+
+        .award {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            background-color: #010D14;
+            padding: 0;
+        }
+
+        .awardlogo {
+            color: #36afff;
+            font-size: 2.4em;
+            font-weight: bold;
+            line-height: 2em;
+            text-align: center;
+            width: 100%;
+        }
+
+        .awardarticle {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 80%;
+        }
+
+        .awardlist {
+            margin: 40px;
+        }
+
+        .awardlist-logo {
+            color: #36afff;
+            font-size: 1.9em;
+            font-weight: bold;
+            line-height: 2em;
+            text-align: left;
+            width: 100%;
+            text-align: left;
+            margin: 10px;
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        .listbig {
+            font-weight: bold;
+            list-style-type: none;
+            color: white;
+            font-size: 1.2em;
+            width: 30vw;
+        }
+
+        .awaardlist2018 {
+            width: 1000px;
+        }
+
+        .QnA {
+            margin: 80px auto;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .QnAlogo {
+            font-size: 2.3em;
+            color: #36AFFF;
+            font-weight: bold;
+            margin: 20px auto;
+        }
+
+        .QnAs {
+            font-size: 1.7em;
+            color: #36AFFF;
+            margin: 30px auto;
+        }
+
+        .QnAm {
+            font-size: 1.7em;
+            margin: 30px auto;
+        }
+
+        .QnAbox {
+            text-align: center;
+            width: 80%;
+
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .sub {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .sublogo {
+            color: #36afff;
+            font-size: 2.4em;
+            font-weight: bold;
+            line-height: 2em;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subcontent {
+            margin: 5px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .lastbutton {
+            transition: 0.5s;
+            cursor: pointer;
+            outline: none;
+            background: none;
+            border-radius: 50px;
+            padding: 20px 100px;
+            margin: 50px;
+            color: #AAAAAA;
+            border: 0.9px solid #AAAAAA;
+            font-size: 1.5em;
+            transition-duration: 0.7s;
+        }
+
+        .lastbutton:hover {
+            background: #aaaaaa;
+            color: white;
+        }
+
+        .bottombar {
+            bottom: 0;
+            width: 100vw;
+            height: 90px;
+            background-color: #36AFFF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .headerbottom-left,
+        .bottombar-right {
+            line-height: 1.8em;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="layout">
+        <div id="topheader">
+            <div id="headerfull">
+                <div id="biglogos">
+                    <span class="biglogo-i">I</span>
+                    <span class="biglogo-w">W</span>
+                    <span class="biglogo-o">O</span>
+                    <span class="biglogo-p">P</span>
+                </div>
+                <p class="headermiddle">Internet World Operation People</p>
+                <p class="headerbottom">소프트웨어과 <span class="headerbottomClock">유일 웹 동아리</span>
+                </p>
+            </div>
+        </div>
+
+        <div id="topbar">
+
+            <div class="topbar-left">IWOP</div>
+
+            <div class="topbar-right">
+                <ul class="topbar-right-menu">
+                    <li class="menu-shift">소개</li>
+                    <li class="menu-shift">커리큘럼</li>
+                    <li class="menu-shift">수상실적</li>
+                    <li class="menu-shift">작품</li>
+                    <li class="menu-shift">QnA</li>
+                    <li class="menu-shift">문의</li>
+                </ul>
+            </div>
+        </div>
+        <section>
+            <div id="middle">
+                <div class="introduce">
+                    <p class="soge">소개</p>
+                    <p class="sogemun">소프트웨어과 전문동아리 중 유일하게
+                        웹동아리인 IWOP은 19년의 역사를 자랑하는 동아리 입니다.
+                        우수한 수상실적을 보유하고있으며, 웹 클라이언트, 서버, 웹 게임 개발과 웹 디자인을 배울 수 있습니다!</p>
+                </div>
+
+                <div class="Curriculum">
+                    <p class="CurriLogo">커리큘럼</p>
+                    <div class="CurriMenu">
+                        <div class="Currilist">
+                            <p class="ListLogo">1. FrontEnd Basic</p>
+                            <p class="Listsentent">처음 IWOP에 들어오면 HTML5와 CSS3로 정적페이지를 만들어봅니다.</p>
+                        </div>
+                        <div class="Currilist">
+                            <p class="ListLogo">2. Javascript</p>
+                            <p class="Listsentent">자바스크립트로 동적인 홈페이지를 제작해봅시다.</p>
+                        </div>
+                        <div class="Currilist">
+                            <p class="ListLogo">3. Node.js</p>
+                            <p class="Listsentent">Node.js와 Express 프레임워크로 웹서버를 만들어봅시다.</p>
+                        </div>
+                        <div class="Currilist">
+                            <p class="ListLogo">4. Database, Server</p>
+                            <p class="Listsentent">MongoDB, Socket.io, Passport로 다양한 서버를 제작해봅니다.</p>
+                        </div>
+                        <div class="Currilist">
+                            <p class="ListLogo">5. FrontEnd Advanced</p>
+                            <p class="Listsentent">Vue로 SPA를 만들어 실제로 배포해봅니다.</p>
+                        </div>
+                        <div class="Currilist">
+                            <p class="ListLogo">6. Web Game</p>
+                            <p class="Listsentent">Phaser.js로 웹게임을 개발하고 기획해봅니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="award">
+            <p class="awardlogo">수상실적</p>
+            <div class="awardarticle">
+                <div class="awardlist">
+                    <p class="awardlist-logo">2016(21)</p>
+                    <ul>
+                        <li class="listbig">모바일 컨텐츠 경진대회</li>
+                        <li class="listbig">리스트 스크롤 만드는거 좀 어려움 넘김</li>
+                    </ul>
+                </div>
+                <div class="awardlist">
+                    <p class="awardlist-logo">2017(16)</p>
+                    <ul>
+                        <li class="listbig">모바일 컨텐츠 경진대회</li>
+                        <li class="listbig">데헷</li>
+                    </ul>
+                </div>
+                <div class="awardlist2018">
+                    <p class="awardlist-logo">2018</p>
+                    <ul>
+                        <li class="listbig">모바일 컨텐츠 경진대회</li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="QnA">
+            <div class="QnAlogo">QnA</div>
+            <div class="QnAbox">
+                <div class="QnAs">Q. 아이왑에 지원하려면 실력이 얼마나 좋아야 하나요?</div>
+                <div class="QnAm">A. 완전 처음이여도 상관없습니다! 웹을 배우고자 하는 열정만 있으면 충분합니다!</div>
+            </div>
+            <div class="QnAbox">
+                <div class="QnAs">Q. 포트폴리오를 반드시 내야 하나요?</div>
+                <div class="QnAm">A. 내든 안 내든 상관없으나 내면 좋습니다.</div>
+            </div>
+            <div class="QnAbox">
+                <div class="QnAs">Q. 지원 자격이 어떻게 되나요?</div>
+                <div class="QnAm">A. 선린 1학년 소프트웨어과, 멀티미디어과가 지원 가능합니다!</div>
+            </div>
+            <div class="QnAbox">
+                <div class="QnAs">Q. 아이왑에 지원하려면 실력이 얼마나 좋아야 하나요?</div>
+                <div class="QnAm">A. 아쉽게도 지원을 받지 않습니다.</div>
+            </div>
+        </div>
+        <div class="sub">
+            <p class="sublogo">문의</p>
+            <span class="subcontent">
+                부장 : 박장훈 (010-7207-8667)
+            </span>
+            <span class="subcontent">쀼장 : 방진혁 (010-2784-1970)</span>
+            <button class="lastbutton">지원마감</button>
+        </div>
+        <div class="bottombar">
+            <div class="bottombar-left" style="margin-left: 40px;">선린인터넷고등학교<br>소프트웨어과 전공 동아리 (IWOP)</div>
+            <div class="bottombar-right" style="margin-right: 40px; text-align: right">GITHUB, FACEBOOK<br>© 2019. PJH.
+                All rights reserved.</div>
+        </div>
+    </div>
+    <script>
+        const topbar = document.getElementById('topbar');
+        const topbary = topbar.offsetTop;
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > topbary && !topbar.classList.contains('fixed')) {
+                topbar.classList.add('fixed');
+            } else if (window.scrollY < topbary && topbar.classList.contains('fixed'))
+                topbar.classList.remove('fixed');
+        })
+
+    </script>
+</body>
+
+</html>
